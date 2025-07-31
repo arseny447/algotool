@@ -2,7 +2,7 @@ import webbrowser
 from urllib.parse import urlparse, parse_qs
 
 # Запрашиваем выбор пользователя
-choice = input("Введите функцию:\n\n1. Статистика о проектах\n\n2. Создать проект на Unity\n\nВаш выбор: ")
+choice = input("Введите функцию:\n\n1. Статистика о проектах\n\n2. Создать проект на Unity\n\n3. Создать видео-проект. Ваш выбор: ")
 
 if choice == "2":
     # Исправлено: добавлены кавычки вокруг URL
@@ -26,5 +26,9 @@ elif choice == "1":
         print("Открываю:", new_url)
         webbrowser.open(new_url)
 
+elif choice == "3":
+    webbrowser.open("https://learn.algoritmika.org/storage/project-previews/a7fa4541aa19c55ec78180d04541e3d9.svg?t=1753976010")
+    webbrowser.open("https://learn.algoritmika.org/laboratory")
+
 else:
-    print("Неверный выбор. Пожалуйста, введите 1 или 2.")
+    print("Неверный выбор. Пожалуйста, введите 1, 2 или 3.")

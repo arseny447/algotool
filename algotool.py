@@ -31,25 +31,10 @@ elif choice == "3":
     webbrowser.open("https://learn.algoritmika.org/laboratory")
 
 elif choice == "4":
-    import webbrowser
-import requests
-from urllib.parse import urlparse, parse_qs
 
-def main():
-    # Получаем projectId из URL
-    url = input("URL проекта: ").strip()
-    project_id = parse_qs(urlparse(url).query).get('projectId', [None])[0]
-    if not project_id: return print("Ошибка: projectId не найден")
-
-    # Получаем метаданные и ищем нужный ID
-    try:
-        data = requests.get(f"https://learn.algoritmika.org/api/v1/projects/info/{project_id}").json()
-        editor = next((k for k in ['scratchid', 'pythonid'] if k in data), None)
-        if editor: webbrowser.open(f"https://learn.algoritmika.org/{editor[:-2]}/editor?project={data[editor]}")
-    except: print("Ошибка при обработке проекта")
-    
-if __name__ == "__main__": main()
+print('сорян что не получилось норм скрипта, но вот тутор: \n\n1. С помощью первой функции заходим на стату проекта.\n\n2. Из ветки "meta" берём цифры в значении "scratchid", "pythonid" и т. д.\n\n3. В лабаратории создаём проект на python или scratch.\n\n Заходим в страницу редактора проекта и вместо цифр в конце вставляем ранееупомянутое значение"
 
 else:
     print("Неверный выбор. Пожалуйста, введите 1, 2 или 3.")
+
 

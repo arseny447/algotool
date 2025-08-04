@@ -1,5 +1,6 @@
 ALGOTOOL
 
+тгк - t.me/algotool0
 
 Как это работает:
 Пользователь вводит URL проекта (например, https://learn.algoritmika.org/community?category=new&filter=projects&projectId=58318608&page=1)
